@@ -170,7 +170,7 @@ if 'past' not in st.session_state:
     st.session_state['past'] = []
 
 
-user_input = st.text_input("You: ", placeholder="Chat with your notion docs here 👇", key="input")
+user_input = st.text_input("You: ", placeholder="Ask me anything 👇", key="input")
 
 if user_input:
     result = chain({"question": user_input, "chat_history": st.session_state["generated"]})
